@@ -6,20 +6,6 @@
 trigger:
 - master
 
-- stage: deploy
-  jobs:
-  - deployment: DeployWeb
-    displayName: deploy Web App
-    pool:
-      vmImage: 'Ubuntu-latest'
-    # creates an environment if it doesn't exist
-    environment: 'dev'
-    strategy:
-      runOnce:
-        deploy:
-          steps:
-          - script: echo Hello world
-
 pool:
   vmImage: ubuntu-latest
 strategy:
